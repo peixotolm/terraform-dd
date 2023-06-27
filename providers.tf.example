@@ -1,0 +1,17 @@
+terraform {
+  required_providers {
+    datadog = {
+      source  = "DataDog/datadog"
+      version = "3.26.0"
+    }
+  }
+  required_version = ">= 0.15"
+  experiments      = [module_variable_optional_attrs]
+}
+
+provider "datadog" {
+  # Configure the DataDog provider
+  api_key = "b09cf3b0e9f114241b0b52b7e16cf68a"
+  app_key = "916db1f65b19dd2abda0894bb938346379f6813d"
+  api_url = "https://api.datadoghq.eu/"
+}
